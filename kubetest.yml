@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: maven-test
+spec:
+  template:
+    metadata:
+      name: maven-test-pod
+    spec:
+      containers:
+        - name: utils-c
+          image: utils
+          imagePullPolicy: Never
+      restartPolicy: Never
