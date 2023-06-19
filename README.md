@@ -8,7 +8,7 @@ minikube start
 ```
 2. Check minikube's docker-environment 
 ```
-minikube docker-en
+minikube docker-env
 ```
 3. Point the terminal to minikube's docker-daemon. This is done because we want minikube to use the locally built images rather than using images from remote registry. Check pull policy in ```echokube.yml```
 ```
@@ -57,4 +57,5 @@ minikube dashboard
 11. Clean up 
 ```
 kubectl delete -f echokube.yml
+minikube stop
 ```
