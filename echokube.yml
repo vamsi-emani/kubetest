@@ -1,14 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: maven-test
+  name: kube-echo-test
 spec:
   template:
     metadata:
-      name: maven-test-pod
+      name: kube-echo-pod
     spec:
       containers:
-        - name: utils-c
-          image: utils
+        - name: kube-test-container
+          image: kubetest
           imagePullPolicy: Never
       restartPolicy: Never
