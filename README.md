@@ -6,6 +6,9 @@ A self serving repository to demonstrate how to containerize a java application 
 - Docker image and Docker container 
 - Purpose of containerisation 
 - Kubernetes, its components and architecture in theory
+  - container -> pod -> cluster
+  - Master node's control plane components - API server, etcd, scheduler, control manager  
+  - Worker node components - Kubelet, Kube proxy, container runtime
 
 Note that there is no remote container registry involved here. We setup minikube in such a way that local docker images on system are picked up rather than via a pull from a remote container registry. This will (obviously) have to be changed in a prod like environment. Docker run command in ```step 5``` although not required is placed in between nevertheless just to validate the successful creation and run of an atomic container outside the scope of kubernetes. Thereafter the docker container is deleted and recreated within the kubernetes pod with ```kubectl``` commands based on the settings picked up from ```yml``` file. 
 
