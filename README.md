@@ -3,8 +3,8 @@
 A self serving repository to demonstrate how to containerize a java application (jar) using docker and how to deploy it on minikube. Assumes that ```kubectl```, ```minikube```, ```docker-toolbox```, ```java``` and ```maven``` have been already installed on the system. Recommended to start the implementation after an understanding of the below fundamentals in the said order: 
 
 - Docker, how is it different from a Virtual Machine?
-- Docker image and Docker container 
-- Purpose of containerisation 
+- Docker image and its image layers, how layers are cached and stacked to build an image
+- Purpose of containerisation (build once, run anywhere, etc)
 - Kubernetes, its components and architecture in theory
   - container -> pod -> cluster
   - Master node's control plane components - API server, etcd, scheduler, controller manager  
